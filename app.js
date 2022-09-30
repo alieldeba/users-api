@@ -2,8 +2,7 @@ const express = require("express");
 const app = express();
 const usersRoute = require("./routes/usersRoute.js");
 const logger = require("./middlewares/logger.js");
-// .env file configration
-require('dotenv').config();
+require("dotenv").config();
 
 // Middleware
 app.use(express.json());
@@ -17,5 +16,5 @@ app.use((req, res) => {
 
 // Listening to server
 app.listen(8080, () => {
-  console.log(`Server Started at localhost:${process.env.PORT}`);
+  console.log(`Server Started at localhost:${process.env.PORT || 3000}`);
 });
