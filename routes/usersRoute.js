@@ -3,7 +3,13 @@ const router = express.Router();
 var uniqid = require("uniqid");
 
 // Database
-let users = [];
+let users = [
+  {
+    firstName: "ali",
+    lastName: "sameh",
+    age: 16
+  }
+];
 
 // Get all users
 router.get("/", (req, res) => {
